@@ -1,0 +1,32 @@
+/* NOTES Johan
+controls kwamen als null terug in de 'game' class, daarom nullpointerexception bij plaatsen handler
+op de één of andere manier moet de control al geinitialiseerd worden als instancevar, dan gaat het goed
+Volgens MVC zou je nu het bijhouden van de fouten en score in het model moeten doen en via getter/setter constructie
+naar desbetreffende label in je view zetten
+model.score++
+view.lblScore = model.getScore();
+etc.....
+
+Succes!
+*/
+
+
+in de knophandler, als ie werkt
+
+____
+
+
+/*
+
+KnopHandlers werken
+
+Speelveld, tekenveld, rechthoek toegevoegd, er is nu een bewegende bal
+
+Tekenveld en Speelveld gemerged in Speelveld, deze was volgensmij dubbel / overbodig
+
+Geprobeerd boolean zichtbaar werkend te maken via knoppen,
+    krijg het niet voor elkaar om de boolean te flippen.
+
+    Als ik op stop druk blijft de boolean true, mn functie werkt wel heel even,
+        aangezien hij een false print, om daarna door te gaan met true;
+
