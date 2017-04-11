@@ -22,36 +22,59 @@ public class ReactieController {
 
     }
 
+    // functie om score / fouten op te hogen
+    public void vormGeklikt(boolean klik) {
+        if (klik) {
+            //Score +1
+            model.setScore(view.getScoreTeller());
+            view.setLblScoreTeller(model.getScore());
+        }
+        else {
+            //Fouten +1
+            model.setFouten(view.getFoutenTeller());
+            view.setLblFoutenTeller(model.getFouten());
+        }
+    }
+
     class ReactieControllerListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
             if 		(e.getActionCommand() == "Vierkant" ){
                 System.out.println("knop Vierkant");
-            //    if(klikcorrect) {
-                model.setFouten(view.getFoutenTeller());
-                view.setLblFoutenTeller(model.getFouten());
             }
+
             else if (e.getActionCommand() == "Cirkel" ) {
                 System.out.println("knop Cirkel");
-                model.setScore(view.getScoreTeller());
-                view.setLblScoreTeller(model.getScore());
             }
+
             else if (e.getActionCommand() == "Rechthoek" ){
                 System.out.println("knop Rechthoek");
+                Rechthoek rh = view.speelveld.getRechthoek();
+                if (rh.getZichtbaar()) {
+                    System.out.println("rechthoek is zichtbaar");
+                    vormGeklikt(true);
+                }
+                else {
+                    System.out.println("rechthoek is niet zichtbaar");
+                    vormGeklikt(false);
+                }
             }
+
             else if (e.getActionCommand() == "Start" ){
                 System.out.println("knop Start");
                 Rechthoek rh = view.speelveld.getRechthoek();
                 rh.setZichtbaar(true);
 
             }
+
             else if (e.getActionCommand() == "Stop" ){
                 System.out.println("knop Stop");
                 Rechthoek rh = view.speelveld.getRechthoek();
                 rh.setZichtbaar(false);
 
             }
+
             else if (e.getActionCommand() == "Reset" ){
                 System.out.println("knop Reset");
                 //stopGame();
