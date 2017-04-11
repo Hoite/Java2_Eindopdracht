@@ -21,7 +21,7 @@ public class ReactieView extends JFrame {
     private JButton btstop = new JButton("Stop");
     private JButton btreset = new JButton("Reset");
 
-    ReactieView() {
+    public ReactieView() {
         JPanel knoppen = new JPanel(new GridLayout(0,3));
         //JPanel game = new JPanel(new BorderLayout());
         JPanel scoreOverzicht = new JPanel(new GridLayout(4,2));

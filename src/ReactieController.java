@@ -10,13 +10,13 @@ public class ReactieController {
 
     private ReactieView view;
     private ReactieModel model;
-    private JPanel speelveld;
+    //private Speelveld speelveld;
 
 
     public ReactieController(ReactieView view, ReactieModel model) {
     this.view = view;
     this.model = model;
-    this.speelveld = view.speelveld;
+    //this.speelveld = view.speelveld;
 
     this.view.addReactieControllerListener(new ReactieControllerListener());
 
@@ -44,6 +44,7 @@ public class ReactieController {
             else if (e.getActionCommand() == "Start" ){
                 System.out.println("knop Start");
                 //speelveld.setZichtbaar(true);
+
             }
             else if (e.getActionCommand() == "Stop" ){
                 System.out.println("knop Stop");

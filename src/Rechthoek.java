@@ -17,6 +17,7 @@ public class Rechthoek {
     private boolean zichtbaar;
 
     private ReactieModel model;
+    private ReactieView view;
 
     public Rechthoek(Color kleur, int x, int y, int breedte, int hoogte) {
         this.kleur = kleur;
@@ -29,9 +30,10 @@ public class Rechthoek {
 
     }
 
+
     public void setZichtbaar(boolean setZichtbaar) {
         zichtbaar = setZichtbaar;
-        System.out.println("setZichtbaar = "+zichtbaar);
+        //System.out.println("setZichtbaar = "+zichtbaar);
     }
 
 

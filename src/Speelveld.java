@@ -23,16 +23,13 @@ public class Speelveld extends JPanel {
         timer.start();
     }
 
+
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         teken(g);
         rechthoek.teken(g);
     }
 
-    public void setZichtbaar(boolean setZichtbaar) {
-
-        rechthoek.setZichtbaar(setZichtbaar);
-    }
 
     class TimerHandler implements ActionListener {
         public void actionPerformed(ActionEvent e) {
