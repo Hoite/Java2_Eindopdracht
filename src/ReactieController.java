@@ -10,13 +10,12 @@ public class ReactieController {
 
     private ReactieView view;
     private ReactieModel model;
-    //private Speelveld speelveld;
+
 
 
     public ReactieController(ReactieView view, ReactieModel model) {
     this.view = view;
     this.model = model;
-    //this.speelveld = view.speelveld;
 
     this.view.addReactieControllerListener(new ReactieControllerListener());
 
@@ -43,11 +42,14 @@ public class ReactieController {
             }
             else if (e.getActionCommand() == "Start" ){
                 System.out.println("knop Start");
-                //speelveld.setZichtbaar(true);
+                Rechthoek rh = view.speelveld.getRechthoek();
+                rh.setZichtbaar(true);
 
             }
             else if (e.getActionCommand() == "Stop" ){
                 System.out.println("knop Stop");
+                Rechthoek rh = view.speelveld.getRechthoek();
+                rh.setZichtbaar(false);
 
             }
             else if (e.getActionCommand() == "Reset" ){

@@ -23,6 +23,9 @@ public class Speelveld extends JPanel {
         timer.start();
     }
 
+    public Rechthoek getRechthoek() {
+        return rechthoek;
+    }
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);

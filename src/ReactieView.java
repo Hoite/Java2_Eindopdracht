@@ -8,7 +8,8 @@ import java.awt.event.*;
 
 public class ReactieView extends JFrame {
 
-    public JPanel speelveld = new Speelveld();
+
+    Speelveld speelveld = new Speelveld();
 
     private JLabel lblScore = new JLabel("Score: ");
     private JLabel lblScoreTeller = new JLabel("0");
@@ -25,7 +26,7 @@ public class ReactieView extends JFrame {
         JPanel knoppen = new JPanel(new GridLayout(0,3));
         //JPanel game = new JPanel(new BorderLayout());
         JPanel scoreOverzicht = new JPanel(new GridLayout(4,2));
-        //JPanel speelveld = new Speelveld();
+
 
         this.setSize(600, 500);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

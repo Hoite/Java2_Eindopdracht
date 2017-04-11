@@ -39,7 +39,7 @@ public class Rechthoek {
 
 
     public void teken(Graphics g) {
-        System.out.println(zichtbaar);
+        //System.out.println(zichtbaar);
         if (zichtbaar) {
             g.setColor(this.kleur); //Color.blue // Color.kleur // kleur // this.kleur
             g.fillRect(x, y, breedte, hoogte);
