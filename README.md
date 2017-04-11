@@ -1,4 +1,4 @@
-# Java2_Eindopdracht
+# Java2 Eindopdracht
 
 Een ReactieGame in Java
 
