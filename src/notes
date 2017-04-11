@@ -30,3 +30,9 @@ Geprobeerd boolean zichtbaar werkend te maken via knoppen,
     Als ik op stop druk blijft de boolean true, mn functie werkt wel heel even,
         aangezien hij een false print, om daarna door te gaan met true;
 
+
+
+_____
+
+Verwijzing vanaf Controller --> Vierkant werkt
+Vormen kunnen zichtbaar en onzichtbaar gemaakt worden.

@@ -18,14 +18,5 @@ public class ReactieModel {
     public void setScore(int score) { this.score += 1; }
 
 
-//    //getter voor zichtbaar
-//    public boolean isZichtbaar() {
-//        return zichtbaar;
-//    }
-
-//    //setter voor zichtbaar
-//    public void setZichtbaar(boolean zichtbaar) {
-//        this.zichtbaar = zichtbaar;
-//    }
 
 }
