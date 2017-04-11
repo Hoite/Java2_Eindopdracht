@@ -43,7 +43,7 @@ public class ReactieController {
             }
             else if (e.getActionCommand() == "Start" ){
                 System.out.println("knop Start");
-                speelveld.setZichtbaar(true);
+                //speelveld.setZichtbaar(true);
             }
             else if (e.getActionCommand() == "Stop" ){
                 System.out.println("knop Stop");
