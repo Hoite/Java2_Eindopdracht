@@ -36,3 +36,12 @@ _____
 
 Verwijzing vanaf Controller --> Vierkant werkt
 Vormen kunnen zichtbaar en onzichtbaar gemaakt worden.
+
+_______
+
+Vormen overerving (Rechthoek extends Vorm)
+
+
+_______
+
+Scoretelling met behulp van klikken op juiste of onjuiste knop werkt naar behoren

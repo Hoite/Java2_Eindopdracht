@@ -13,9 +13,13 @@ public class ReactieModel {
     //getter voor score
     public int getScore() { return score; }
     //setter voor fouten
-    public void setFouten(int fouten) { this.fouten += 1; }
+    public void setFouten(int fouten) {
+        this.fouten = fouten;
+    }
     //setter voor score
-    public void setScore(int score) { this.score += 1; }
+    public void setScore(int score) {
+        this.score = score;
+    }
 
 
 

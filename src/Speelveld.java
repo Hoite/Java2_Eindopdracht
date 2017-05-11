@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * Created by hoite on 4-4-17.
  */
 public class Speelveld extends JPanel {
-    public Timer timer = new Timer(10, new TimerHandler());
+    public Timer timer = new Timer(50, new TimerHandler());
 
     //private nogmeervormen nogmeervormen;
     private Rechthoek rechthoek;
@@ -40,7 +40,7 @@ public class Speelveld extends JPanel {
     }
 
     void teken (Graphics g) {
-        g.setColor(Color.green);
+        g.setColor(Color.GRAY);
         g.fillRect(1, 1, 455, 455);
     }
 }

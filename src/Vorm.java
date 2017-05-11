@@ -8,8 +8,8 @@ import java.awt.Graphics;
 
 public class Vorm {
 
-    public int x = (int) (450 * Math.random() + 50);
-    public int y = (int) (450 * Math.random() + 50);
+    public int x = (int) (450 * Math.random() + 25);
+    public int y = (int) (450 * Math.random() + 25);
     public int w = 30;
     public int h = 30;
     public int dx = 3, dy = 2;
@@ -32,9 +32,9 @@ public class Vorm {
     public void verplaats(){
 
 
-        if (x +dx <= 50 || x + dx + 10 >= 450 )
+        if (x +dx <= 1 || x + dx + 25 >= 450 )
             dx = -dx;
-        if ( y + dy <= 50 || y + dy + 10 >= 450)
+        if ( y + dy <= 1 || y + dy + 25 >= 450)
             dy = -dy;
 
         x += dx; y += dy;

@@ -26,12 +26,12 @@ public class ReactieController {
     public void vormGeklikt(boolean klik) {
         if (klik) {
             //Score +1
-            model.setScore(view.getScoreTeller());
+            model.setScore(view.getScoreTeller() + 1);
             view.setLblScoreTeller(model.getScore());
         }
         else {
             //Fouten +1
-            model.setFouten(view.getFoutenTeller());
+            model.setFouten(view.getFoutenTeller() + 1);
             view.setLblFoutenTeller(model.getFouten());
         }
     }
@@ -75,13 +75,16 @@ public class ReactieController {
 
             }
 
-            else if (e.getActionCommand() == "Reset" ){
+            else if (e.getActionCommand() == "Reset" ) {
                 System.out.println("knop Reset");
-                //stopGame();
-                //score = 0;
-                //fouten = 0;
-                //setScore(score);
-                //setFouten(fouten);
+                model.setScore(0);
+                model.setFouten(0);
+                view.setLblScoreTeller(0);
+                view.setLblFoutenTeller(0);
+
+                Rechthoek rh = view.speelveld.getRechthoek();
+                rh.setZichtbaar(false);
+
             }
 
 
