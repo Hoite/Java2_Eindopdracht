@@ -11,7 +11,7 @@ public class Rechthoek extends Vorm {
         //System.out.println(zichtbaar);
         if (zichtbaar) {
             g.setColor(Color.PINK);
-            g.fillRect(x, y, w*2, h);
+            g.fillRect(x, y, w*3, h);
         }
 
 

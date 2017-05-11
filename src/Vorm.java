@@ -8,10 +8,10 @@ import java.awt.Graphics;
 
 public class Vorm {
 
-    public int x = (int) (450 * Math.random() + 25);
-    public int y = (int) (450 * Math.random() + 25);
-    public int w = 30;
-    public int h = 30;
+    public int x = (int) (400 * Math.random() + 25);
+    public int y = (int) (400 * Math.random() + 25);
+    public int w = 20;
+    public int h = 20;
     public int dx = 3, dy = 2;
     public boolean zichtbaar;
 

@@ -53,7 +53,7 @@ public class Speelveld extends JPanel {
 
     //Tekenen van het tekenveld
     void teken (Graphics g) {
-        g.setColor(Color.GRAY);
+        g.setColor(Color.LIGHT_GRAY);
         g.fillRect(1, 1, 455, 455);
     }
 }

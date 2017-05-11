@@ -113,6 +113,10 @@ public class ReactieController {
                 System.out.println("knop Start");
                 Rechthoek rh = view.speelveld.getRechthoek();
                 rh.setZichtbaar(true);
+                Cirkel ck = view.speelveld.getCirkel();
+                ck.setZichtbaar(true);
+                Vierkant vk = view.speelveld.getVierkant();
+                vk.setZichtbaar(true);
 
             }
 
