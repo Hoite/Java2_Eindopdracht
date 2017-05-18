@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Java2_Eindopdracht:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Java2_Eindopdracht_jar</output-path>
+    <root id="archive" name="Java2_Eindopdracht.jar">
+      <element id="module-output" name="Java2_Eindopdracht" />
+    </root>
+  </artifact>
+</component>
