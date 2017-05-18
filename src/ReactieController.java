@@ -122,6 +122,8 @@ public class ReactieController {
 
             else if (e.getActionCommand() == "Stop" ){
                 System.out.println("knop Stop");
+
+                //Vormen onzichtbaar maken
                 Rechthoek rh = view.speelveld.getRechthoek();
                 rh.setZichtbaar(false);
                 Cirkel ck = view.speelveld.getCirkel();
@@ -133,13 +135,19 @@ public class ReactieController {
 
             else if (e.getActionCommand() == "Reset" ) {
                 System.out.println("knop Reset");
+                //Scores en labels op nul
                 model.setScore(0);
                 model.setFouten(0);
                 view.setLblScoreTeller(0);
                 view.setLblFoutenTeller(0);
 
+                //Vormen onzichtbaar maken
                 Rechthoek rh = view.speelveld.getRechthoek();
                 rh.setZichtbaar(false);
+                Cirkel ck = view.speelveld.getCirkel();
+                ck.setZichtbaar(false);
+                Vierkant vk = view.speelveld.getVierkant();
+                vk.setZichtbaar(false);
 
             }
 
