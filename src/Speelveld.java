@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * Created by hoite on 4-4-17.
  */
 public class Speelveld extends JPanel {
-    public Timer timer = new Timer(50, new TimerHandler());
+    public Timer timer = new Timer(20, new TimerHandler());
 
     //private nogmeervormen nogmeervormen;
     private Rechthoek rechthoek;

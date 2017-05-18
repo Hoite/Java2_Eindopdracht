@@ -7,7 +7,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class Vorm {
-
+//hier komen threads
     public int x = (int) (400 * Math.random() + 25);
     public int y = (int) (400 * Math.random() + 25);
     public int w = 20;
