@@ -36,24 +36,25 @@ public class ReactieController {
 
 
 
+
     // functie om score / fouten op te hogen
     public void vormGeklikt(String welkeVorm) {
         //welkeVorm kan vierkant, rechthoek of cirkel zijn
-        //rechthoek
+
+        //rechthoek getten in variabele
         Rechthoek rh = view.speelveld.getRechthoek();
 
-        //cirkel
+        //cirkel getten in variabele
         Cirkel ck = view.speelveld.getCirkel();
 
-        //vierkant
+        //vierkant getten in variabele
         Vierkant vk = view.speelveld.getVierkant();
 
         if (welkeVorm == "vierkant") {
             //als vierkant is geklikt
-            if(vk.getZichtbaar()){
-                System.out.println("vierkant is zichtbaar");
+            if(view.speelveld.getVierkantStatus()){
                 klikGoed();
-                vk.setZichtbaar(false);
+                view.speelveld.stopVierkant();
             }
             else {
                 System.out.println("vierkant is niet zichtbaar");
@@ -63,10 +64,9 @@ public class ReactieController {
 
         else if (welkeVorm == "rechthoek") {
             //als rechthoek is geklikt
-            if (rh.getZichtbaar()) {
-                System.out.println("rechthoek is zichtbaar");
+            if (view.speelveld.getRechthoekStatus()) {
                 klikGoed();
-                rh.setZichtbaar(false);
+                view.speelveld.stopRechthoek();
             }
             else {
                 System.out.println("rechthoek is niet zichtbaar");
@@ -75,18 +75,14 @@ public class ReactieController {
         }
         else if (welkeVorm == "cirkel") {
             //als cirkel is geklikt
-            if(ck.getZichtbaar()){
-                System.out.println("cirkel is zichtbaar");
+            if (view.speelveld.getCirkelStatus()) {
                 klikGoed();
-                ck.setZichtbaar(false);
+                //cirkelweg
+                view.speelveld.stopCirkel();
             }
             else {
-                System.out.println("cirkel is niet zichtbaar");
                 klikFout();
             }
-        }
-        else {
-            System.out.println("Dit zou niet kunnen gebeuren");
         }
     }
 
@@ -111,26 +107,12 @@ public class ReactieController {
 
             else if (e.getActionCommand() == "Start" ){
                 System.out.println("knop Start");
-                Rechthoek rh = view.speelveld.getRechthoek();
-                rh.setZichtbaar(true);
-                Cirkel ck = view.speelveld.getCirkel();
-                ck.setZichtbaar(true);
-                Vierkant vk = view.speelveld.getVierkant();
-                vk.setZichtbaar(true);
-
+                view.speelveld.startSpel();
             }
 
             else if (e.getActionCommand() == "Stop" ){
                 System.out.println("knop Stop");
-
-                //Vormen onzichtbaar maken
-                Rechthoek rh = view.speelveld.getRechthoek();
-                rh.setZichtbaar(false);
-                Cirkel ck = view.speelveld.getCirkel();
-                ck.setZichtbaar(false);
-                Vierkant vk = view.speelveld.getVierkant();
-                vk.setZichtbaar(false);
-
+                view.speelveld.stopSpel();
             }
 
             else if (e.getActionCommand() == "Reset" ) {
@@ -140,15 +122,6 @@ public class ReactieController {
                 model.setFouten(0);
                 view.setLblScoreTeller(0);
                 view.setLblFoutenTeller(0);
-
-                //Vormen onzichtbaar maken
-                Rechthoek rh = view.speelveld.getRechthoek();
-                rh.setZichtbaar(false);
-                Cirkel ck = view.speelveld.getCirkel();
-                ck.setZichtbaar(false);
-                Vierkant vk = view.speelveld.getVierkant();
-                vk.setZichtbaar(false);
-
             }
 
 

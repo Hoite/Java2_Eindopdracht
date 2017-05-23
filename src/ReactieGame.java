@@ -1,7 +1,9 @@
 /**
  * Created by hoite on 24-3-17.
  */
-public class ReactieGame { //Opstartklasse
+
+//Opstartklasse
+public class ReactieGame {
 
     public static void main(String[] args) {
         ReactieModel model = new ReactieModel();
@@ -12,10 +14,3 @@ public class ReactieGame { //Opstartklasse
         view.setVisible(true);
     }
 }
-
-
-//Aanroepen:
-//
-//Model - de regels van het spel (de logica)
-//View - aanroepen ballen en vormen
-//Controller - knoppen en knophandlers

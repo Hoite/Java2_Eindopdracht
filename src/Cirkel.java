@@ -4,11 +4,18 @@ import java.awt.*;
  * Created by hoite on 11-5-17.
  */
 public class Cirkel extends Vorm{
-    public void teken(Graphics g) {
-        //System.out.println(zichtbaar);
-        if (zichtbaar) {
-            g.setColor(Color.RED);
-            g.fillOval(x, y, w, h);
-        }
+    public Cirkel(Graphics g) {
+        super(g);
     }
+
+    @Override
+    public void teken(Color kleur) {
+        if  (kleur == null){
+            kleur = Color.RED;
+        }
+        g.setColor(kleur);
+        g.fillOval(x, y, w, h);
+    }
+
+
 }

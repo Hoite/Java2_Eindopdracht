@@ -6,15 +6,18 @@ import java.awt.*;
 
 public class Rechthoek extends Vorm {
 
+    public Color kleur = Color.BLUE;
 
-    public void teken(Graphics g) {
-        //System.out.println(zichtbaar);
-        if (zichtbaar) {
-            g.setColor(Color.PINK);
-            g.fillRect(x, y, w*3, h);
-        }
-
-
+    public Rechthoek(Graphics g) {
+        super(g);
     }
 
+    @Override
+    public void teken(Color kleur) {
+        if(kleur == null) {
+            kleur = Color.BLUE;
+        }
+        g.setColor(kleur);
+        g.fillRect(x,y,w*3,h);
+    }
 }
