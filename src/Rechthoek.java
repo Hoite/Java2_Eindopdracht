@@ -6,7 +6,6 @@ import java.awt.*;
 
 public class Rechthoek extends Vorm {
 
-    public Color kleur;
 
     public Rechthoek(Graphics g) {
         super(g);

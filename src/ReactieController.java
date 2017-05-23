@@ -2,7 +2,6 @@
  * Created by hoite on 24-3-17.
  */
 
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -123,10 +122,6 @@ public class ReactieController {
                 view.setLblScoreTeller(0);
                 view.setLblFoutenTeller(0);
             }
-
-
         }
-
     }
-
 }

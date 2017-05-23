@@ -5,8 +5,6 @@ import java.awt.*;
  */
 public class Vierkant extends Vorm {
 
-    public Color kleur = Color.GREEN;
-
     public Vierkant(Graphics g) {
         super(g);
     }
