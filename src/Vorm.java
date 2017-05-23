@@ -19,7 +19,6 @@ public class Vorm extends Thread {
     public int w = 20;
     public int h = 20;
     public int dx = 3, dy = 2;
-    public boolean zichtbaar;
 
 
     public Vorm(Graphics g){
@@ -54,16 +53,6 @@ public class Vorm extends Thread {
         catch (InterruptedException e) {
 
         }
-    }
-
-
-
-    public boolean getZichtbaar(){
-        return zichtbaar;
-    }
-
-    public void setZichtbaar(boolean zichtbaar){
-        this.zichtbaar = zichtbaar;
     }
 
     public void verplaats(){
