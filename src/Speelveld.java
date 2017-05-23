@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -18,7 +17,7 @@ public class Speelveld extends JPanel {
     //Aanmaken array met vormen in threads
     Thread[] vormenArray = new Thread[4];
     private int randomwaarde;
-    boolean testwaarde;
+    boolean running;
 
     private int min = 1000;
     private int max = 1000;
@@ -59,20 +58,20 @@ public class Speelveld extends JPanel {
     public void startSpel() {
         //start animatie
 
-        if(testwaarde == false) {
+        if(running == false) {
             initializeVormen();
 
             timerRunAction.start();
-            testwaarde = true;
+            running = true;
         }
     }
 
     public void initializeVormen() {
-        if(testwaarde == false) {
+        if(running == false) {
             vormenArray[1] = new Cirkel(getGraphics());
             vormenArray[2] = new Vierkant(getGraphics());
             vormenArray[3] = new Rechthoek(getGraphics());
-            testwaarde = true;
+            running = true;
         }
     }
 
@@ -146,7 +145,7 @@ public class Speelveld extends JPanel {
                 e1.printStackTrace();
             }
         }
-        testwaarde = false;
+        running = false;
         timerRunAction.stop();
     }
 

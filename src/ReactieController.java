@@ -107,11 +107,20 @@ public class ReactieController {
             else if (e.getActionCommand() == "Start" ){
                 System.out.println("knop Start");
                 view.speelveld.startSpel();
+                view.setVormenActief(true);
+                view.setStartknopActief(false);
+                view.setStopknopActief(true);
+                view.setResetknopActief(false);
             }
 
             else if (e.getActionCommand() == "Stop" ){
                 System.out.println("knop Stop");
-                view.speelveld.stopSpel();
+                    if(view.speelveld.running) {
+                        view.speelveld.stopSpel();
+                    }
+                view.setVormenActief(false);
+                view.setStartknopActief(true);
+                view.setResetknopActief(true);
             }
 
             else if (e.getActionCommand() == "Reset" ) {

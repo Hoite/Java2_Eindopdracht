@@ -38,11 +38,16 @@ public class ReactieView extends JFrame {
         scoreOverzicht.add(lblFouten);
         scoreOverzicht.add(lblFoutenTeller);
         knoppen.add(btvierkant);
+        btvierkant.setEnabled(false);
         knoppen.add(btcirkel);
+        btcirkel.setEnabled(false);
         knoppen.add(btrechthoek);
+        btrechthoek.setEnabled(false);
         scoreOverzicht.add(btstart);
         scoreOverzicht.add(btstop);
+        btstop.setEnabled(false);
         scoreOverzicht.add(btreset);
+        btreset.setEnabled(false);
 
         btvierkant.	setBounds(10,10,80,20);
         btcirkel.	setBounds(10,10,80,20);
@@ -53,6 +58,51 @@ public class ReactieView extends JFrame {
         this.add(scoreOverzicht, BorderLayout.EAST);
 
 
+    }
+
+    public void setVormenActief(boolean actief) {
+        if (actief) {
+            //vormknoppen naar actief
+            btcirkel.setEnabled(true);
+            btrechthoek.setEnabled(true);
+            btvierkant.setEnabled(true);
+        }
+        else {
+            //vormknoppen naar grijs
+            btcirkel.setEnabled(false);
+            btrechthoek.setEnabled(false);
+            btvierkant.setEnabled(false);
+        }
+    }
+
+    public void setStartknopActief(boolean actief) {
+        if(actief) {
+            btstart.setEnabled(true);
+        }
+
+        else {
+            btstart.setEnabled(false);
+        }
+    }
+
+    public void setStopknopActief(boolean actief) {
+        if(actief) {
+            btstop.setEnabled(true);
+        }
+
+        else {
+            btstop.setEnabled(false);
+        }
+    }
+
+    public void setResetknopActief(boolean actief) {
+        if(actief) {
+            btreset.setEnabled(true);
+        }
+
+        else {
+            btreset.setEnabled(false);
+        }
     }
 
     void addReactieControllerListener (ActionListener listenForAnyButton) {
