@@ -1,5 +1,7 @@
 /**
  * Created by hoite on 24-3-17.
+ * Controller vanuit MVC
+ * Hier gebeurd de afhandeling van knoppen
  */
 
 import java.awt.event.ActionEvent;
@@ -21,12 +23,20 @@ public class ReactieController {
 
     }
 
+    /**
+     * Afhandeling van de goed/fout
+     * Score +1
+     */
     public void klikGoed() {
         //Score +1
         model.setScore(view.getScoreTeller() + 1);
         view.setLblScoreTeller(model.getScore());
     }
 
+    /**
+     * Afhandeling van de goed/fout
+     * Fouten +1
+     */
     public void klikFout() {
         //Fouten +1
         model.setFouten(view.getFoutenTeller() + 1);
@@ -34,9 +44,13 @@ public class ReactieController {
     }
 
 
+    /**
+     * // functie om score / fouten op te hogen
+     * @param welkeVorm is een string die hardcoded aangeeft op welke vorm er geklikt is (doorgegeven vanuit knophandler)
+     */
 
 
-    // functie om score / fouten op te hogen
+
     public void vormGeklikt(String welkeVorm) {
         //welkeVorm kan vierkant, rechthoek of cirkel zijn
 
@@ -85,6 +99,12 @@ public class ReactieController {
         }
     }
 
+
+    /**
+     * enkele knophandler voor alle knoppen
+     * Knophandler zoekt zelf uit welke knop ingedrukt is.
+     * Knophandler roept alleen andere functies aan
+     */
     class ReactieControllerListener implements ActionListener {
 
         @Override

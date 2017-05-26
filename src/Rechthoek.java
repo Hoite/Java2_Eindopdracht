@@ -4,6 +4,10 @@ import java.awt.*;
  * Created by hoite on 4-4-17.
  */
 
+
+/**
+ * Class voor de vorm Rechthoek
+ */
 public class Rechthoek extends Vorm {
 
 

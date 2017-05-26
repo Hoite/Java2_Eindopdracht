@@ -4,6 +4,9 @@ import java.awt.*;
  * Created by hoite on 11-5-17.
  */
 
+/**
+ * Class voor de vorm Vierkant
+ */
 public class Vierkant extends Vorm {
 
     public Vierkant(Graphics g) {

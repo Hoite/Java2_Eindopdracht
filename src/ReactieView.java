@@ -1,5 +1,7 @@
 /**
  * Created by hoite on 24-3-17.
+ * View vanuit MVC
+ * Hier worden alle knoppen en schermen aangemaakt
  */
 
 import javax.swing.*;

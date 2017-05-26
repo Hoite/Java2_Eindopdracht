@@ -6,6 +6,8 @@ import java.util.Random;
 
 /**
  * Created by hoite on 4-4-17.
+ * Uitbreiding op de view (ReactieView) vanuit MVC
+ * View voor alleen het speelveld (Grijs vlak waar vormen in komen)
  */
 public class Speelveld extends JPanel {
 
@@ -27,7 +29,9 @@ public class Speelveld extends JPanel {
     Timer timerRunAction;
 
 
-
+    /**
+     * Speelveld maakt timers aan
+     */
     public Speelveld() {
         //RandomTimer
         randomTime = new Random();
@@ -37,7 +41,9 @@ public class Speelveld extends JPanel {
     }
 
 
-
+    /**
+     * functie voor het checken of een vorm bestaat, benodigd voor bepalen goed/fout
+     */
     public void getStatus() {
         System.out.println(vormenArray[1].isAlive());
         System.out.println(vormenArray[2].isAlive());
@@ -55,6 +61,9 @@ public class Speelveld extends JPanel {
         return vormenArray[2].isAlive();
     }
 
+    /**
+     * Functie om het spel te starten
+     */
     public void startSpel() {
         //start animatie
 
@@ -66,6 +75,9 @@ public class Speelveld extends JPanel {
         }
     }
 
+    /**
+     * functie die de vormen aanmaakt
+     */
     public void initializeVormen() {
         if(running == false) {
             vormenArray[1] = new Cirkel(getGraphics());
@@ -79,7 +91,8 @@ public class Speelveld extends JPanel {
         randomN();
         int h = randomwaarde;
 
-        System.out.println(h);
+        //debug
+        //System.out.println(h);
 
         if (h == 1 && !vormenArray[1].isAlive()) {
             vormenArray[1].start();
@@ -92,11 +105,18 @@ public class Speelveld extends JPanel {
         }
     }
 
+    /**
+     * random functie voor het aanmaken van de vormen als het spel loopt
+     * @return output een random nummer tussen de 1 en de 3
+     */
     public int randomN() {
         randomwaarde = (int) (3 * Math.random() +1);
         return randomwaarde;
     }
 
+    /**
+     * functie voor het stoppen van de vorm cirkel
+     */
     public void stopCirkel() {
         ((Vorm) vormenArray[1]).nuStoppen();
         repaint();
@@ -109,6 +129,9 @@ public class Speelveld extends JPanel {
         vormenArray[1] = new Cirkel(getGraphics());
     }
 
+    /**
+     * functie voor het stoppen van de vorm vierkant
+     */
     public void stopVierkant() {
         ((Vorm) vormenArray[2]).nuStoppen();
         repaint();
@@ -121,6 +144,9 @@ public class Speelveld extends JPanel {
         vormenArray[2] = new Vierkant(getGraphics());
     }
 
+    /**
+     * functie voor het stoppen van de vorm rechthoek
+     */
     public void stopRechthoek() {
         ((Vorm) vormenArray[3]).nuStoppen();
         repaint();
@@ -132,7 +158,9 @@ public class Speelveld extends JPanel {
         }
         vormenArray[3] = new Rechthoek(getGraphics());
     }
-
+    /**
+     * functie voor het stoppen van het hele spel
+     */
     public void stopSpel() {
         //stop animatie
         for (int j = 1; j < 4; j++) {
@@ -156,17 +184,26 @@ public class Speelveld extends JPanel {
         }
     }
 
-    //getters voor de vormen
+    /**
+     * Getters voor de vormen
+     */
     public Rechthoek getRechthoek() { return rechthoek; }
     public Cirkel getCirkel() { return cirkel; }
     public Vierkant getVierkant() { return vierkant; }
 
+    /**
+     * Functie voor het tekenen van de vormen
+     * @param g voor graphics
+     */
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         teken(g);
     }
 
-    //Tekenen van het tekenveld
+    /**
+     * functie voor het tekenen van het tekenveld
+     * @param g voor graphics
+     */
     void teken (Graphics g) {
         g.setColor(Color.LIGHT_GRAY);
         g.fillRect(1, 1, 455, 455);

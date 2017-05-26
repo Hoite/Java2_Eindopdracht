@@ -1,5 +1,6 @@
 /**
  * Created by hoite on 24-3-17.
+ * Startklassen met Main, maakt Model + View + Controller aan
  */
 
 //Opstartklasse

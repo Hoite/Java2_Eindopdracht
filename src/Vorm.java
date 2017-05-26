@@ -6,6 +6,10 @@
 import java.awt.Color;
 import java.awt.Graphics;
 
+
+/**
+ * Superklasse van elke vorm
+ */
 public class Vorm extends Thread {
     //Threads variabelen
     public Graphics g;
@@ -46,6 +50,10 @@ public class Vorm extends Thread {
 
     }
 
+    /**
+     * Functie benodigd voor het afsluiten van een thread
+     * @param millisec
+     */
     public void slaap (int millisec) {
         try {
             Thread.sleep(millisec);
@@ -55,6 +63,9 @@ public class Vorm extends Thread {
         }
     }
 
+    /**
+     * Wiskundige bullshit wat ervoor zorgt dat de vorm beweegt
+     */
     public void verplaats(){
 
         if (x +dx <= 1 || x + dx + 25 >= 450 )

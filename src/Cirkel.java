@@ -4,6 +4,9 @@ import java.awt.*;
  * Created by hoite on 11-5-17.
  */
 
+/**
+ * Class voor de vorm Cirkel
+ */
 public class Cirkel extends Vorm{
     public Cirkel(Graphics g) {
         super(g);
